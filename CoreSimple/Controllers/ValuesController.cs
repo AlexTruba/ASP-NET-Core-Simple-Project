@@ -12,16 +12,16 @@ using CoreSimple.Logger;
 namespace CoreSimple.Controllers
 {
     [Route("api/[controller]")]
-    public class CityController : Controller
+    public class ValuesController : Controller
     {
         private readonly ServiceAsync<City> _serviceAsync;
         private readonly IService<City> _service;
         private readonly ILogger _logger;
-        public CityController(ServiceAsync<City> serviceAsync, IService<City> service, FileLogger logger)
+        public ValuesController(ServiceAsync<City> serviceAsync, IService<City> service, ILoggerFactory logger)
         {
             _serviceAsync = serviceAsync;
             _service = service;
-            _logger = logger;
+            _logger = logger.CreateLogger("FileLogger");
         }
         // GET api/values
         [HttpGet]

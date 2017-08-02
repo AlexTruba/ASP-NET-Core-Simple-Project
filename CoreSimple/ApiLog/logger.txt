@@ -2,7 +2,7 @@ Using database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
 Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
 Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
 Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (201ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (168ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT OBJECT_ID(N'__EFMigrationsHistory');
 Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
 Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
@@ -12,7 +12,7 @@ Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT OBJECT_ID(N'__EFMigrationsHistory');
 Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
 Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (95ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [MigrationId], [ProductVersion]
 FROM [__EFMigrationsHistory]
 ORDER BY [MigrationId];
@@ -44,7 +44,7 @@ TRACKED: False
 )
 
 Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT CASE
     WHEN EXISTS (
         SELECT 1
@@ -54,139 +54,17 @@ END
 Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
 Hosting starting
 Hosting started
-Connection id "0HL6PQ0U9JDL1" started.
-Connection id "0HL6PQ0U9JDL0" started.
+Connection id "0HL6PQR90OM8S" started.
+Connection id "0HL6PQR90OM8R" started.
 Request starting HTTP/1.1 GET http://localhost:53068/api/values  
 Request starting HTTP/1.1 DEBUG http://localhost:53068/  0
-Connection id "0HL6PQ0U9JDL0" completed keep alive response.
-Request finished in 274.9117ms 200 
-Request did not match any routes.
-Connection id "0HL6PQ0U9JDL1" completed keep alive response.
-Request finished in 524.955ms 404 
-Request starting HTTP/1.1 GET http://localhost:53068/favicon.ico  
-Request did not match any routes.
-Connection id "0HL6PQ0U9JDL0" completed keep alive response.
-Request finished in 13.2783ms 404 
-Request starting HTTP/1.1 GET http://localhost:53068/api/values/1  
-Request did not match any routes.
-Connection id "0HL6PQ0U9JDL1" completed keep alive response.
-Request finished in 19.4085ms 404 
-Request starting HTTP/1.1 GET http://localhost:53068/api/city/1  
-Request successfully matched the route with name '(null)' and template 'api/City/{id}'.
-Action 'CoreSimple.Controllers.CityController.Put (CoreSimple)' with id '081ff2a3-9558-49ce-b291-bd60b2689ed7' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Action 'CoreSimple.Controllers.CityController.Delete (CoreSimple)' with id '8cd78410-165d-440b-881e-8e9de2f87b84' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action CoreSimple.Controllers.CityController.Get (CoreSimple)
-Executed action CoreSimple.Controllers.CityController.Get (CoreSimple) in 68.094ms
-Connection id "0HL6PQ0U9JDL0": An unhandled exception was thrown by the application.
-Connection id "0HL6PQ0U9JDL0" completed keep alive response.
-Request finished in 619.5634ms 500 
-Request starting HTTP/1.1 GET http://localhost:53068/api/cit  
-Request did not match any routes.
-Connection id "0HL6PQ0U9JDL1" completed keep alive response.
-Request finished in 14.9672ms 404 
-Request starting HTTP/1.1 GET http://localhost:53068/api/city  
-Request successfully matched the route with name '(null)' and template 'api/City'.
-Action 'CoreSimple.Controllers.CityController.Post (CoreSimple)' with id '641b631d-02e6-4497-940d-32761bd6d30c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action CoreSimple.Controllers.CityController.Get (CoreSimple)
-Executed action CoreSimple.Controllers.CityController.Get (CoreSimple) in 0.7689ms
-Connection id "0HL6PQ0U9JDL0": An unhandled exception was thrown by the application.
-Connection id "0HL6PQ0U9JDL0" completed keep alive response.
-Request finished in 29.7523ms 500 
-Request starting HTTP/1.1 GET http://localhost:53068/api/City  
-Request successfully matched the route with name '(null)' and template 'api/City'.
-Action 'CoreSimple.Controllers.CityController.Post (CoreSimple)' with id '641b631d-02e6-4497-940d-32761bd6d30c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action CoreSimple.Controllers.CityController.Get (CoreSimple)
-Executed action CoreSimple.Controllers.CityController.Get (CoreSimple) in 0.5874ms
-Connection id "0HL6PQ0U9JDL1": An unhandled exception was thrown by the application.
-Connection id "0HL6PQ0U9JDL1" completed keep alive response.
-Request finished in 32.1503ms 500 
-Request starting HTTP/1.1 GET http://localhost:53068/api/City application/json 
-Request successfully matched the route with name '(null)' and template 'api/City'.
-Action 'CoreSimple.Controllers.CityController.Post (CoreSimple)' with id '641b631d-02e6-4497-940d-32761bd6d30c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action CoreSimple.Controllers.CityController.Get (CoreSimple)
-Executed action CoreSimple.Controllers.CityController.Get (CoreSimple) in 0.4766ms
-Connection id "0HL6PQ0U9JDL0": An unhandled exception was thrown by the application.
-Connection id "0HL6PQ0U9JDL0" completed keep alive response.
-Request finished in 144.9183ms 500 
-Connection id "0HL6PQ0U9JDL1" received FIN.
-Connection id "0HL6PQ0U9JDL1" disconnecting.
-Connection id "0HL6PQ0U9JDL1" sending FIN.
-Connection id "0HL6PQ0U9JDL1" sent FIN with status "0".
-Connection id "0HL6PQ0U9JDL1" stopped.
-Using database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (265ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT OBJECT_ID(N'__EFMigrationsHistory');
-Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT OBJECT_ID(N'__EFMigrationsHistory');
-Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT [MigrationId], [ProductVersion]
-FROM [__EFMigrationsHistory]
-ORDER BY [MigrationId];
-Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Compiling query model: 
-'(from City <generated>_1 in DbSet<City>
-select <generated>_1)
-.Any()'
-Optimized query model: 
-'(from City <generated>_1 in DbSet<City>
-select <generated>_1)
-.Any()'
-TRACKED: False
-(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
-    element: bool GetResult(
-        valueBuffers: IEnumerable<ValueBuffer> _Query(
-            queryContext: queryContext, 
-            shaperCommandContext: SelectExpression: 
-                SELECT CASE
-                    WHEN EXISTS (
-                        SELECT 1
-                        FROM [City] AS [c])
-                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
-                END
-            , 
-            queryIndex: default(System.Nullable`1[System.Int32])
-        )
-    )
-)
-
-Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT CASE
-    WHEN EXISTS (
-        SELECT 1
-        FROM [City] AS [c])
-    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
-END
-Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Hosting starting
-Hosting started
-Connection id "0HL6PQ3CSK93O" started.
-Connection id "0HL6PQ3CSK93P" started.
-Request starting HTTP/1.1 DEBUG http://localhost:53068/  0
-Request starting HTTP/1.1 GET http://localhost:53068/api/values  
-Connection id "0HL6PQ3CSK93O" completed keep alive response.
-Request finished in 288.7648ms 200 
-Request did not match any routes.
-Connection id "0HL6PQ3CSK93P" completed keep alive response.
-Request finished in 505.718ms 404 
-Request starting HTTP/1.1 GET http://localhost:53068/favicon.ico  
-Request did not match any routes.
-Connection id "0HL6PQ3CSK93O" completed keep alive response.
-Request finished in 17.2302ms 404 
-Request starting HTTP/1.1 GET http://localhost:53068/api/city  
-Request successfully matched the route with name '(null)' and template 'api/City'.
-Action 'CoreSimple.Controllers.CityController.Post (CoreSimple)' with id '7575527d-71c5-4dd9-a235-26f75fc6667f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action CoreSimple.Controllers.CityController.Get (CoreSimple)
-Executing action method CoreSimple.Controllers.CityController.Get (CoreSimple) with arguments ((null)) - ModelState is Valid
+Connection id "0HL6PQR90OM8R" completed keep alive response.
+Request finished in 239.0566ms 200 
+Request successfully matched the route with name '(null)' and template 'api/Values'.
+Action 'CoreSimple.Controllers.ValuesController.Post (CoreSimple)' with id 'fceaf537-48d6-49ce-ab36-b88c741edf62' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action CoreSimple.Controllers.ValuesController.Get (CoreSimple)
+Executing action method CoreSimple.Controllers.ValuesController.Get (CoreSimple) with arguments ((null)) - ModelState is Valid
+08/02/2017 21:46:44 - CityController: Get method. 
 Compiling query model: 
 'from City <generated>_0 in DbSet<City>
 select <generated>_0'
@@ -208,20 +86,35 @@ Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT [c].[Id], [c].[Country], [c].[Name], [c].[Population]
 FROM [City] AS [c]
 Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed action method CoreSimple.Controllers.CityController.Get (CoreSimple), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+Executed action method CoreSimple.Controllers.ValuesController.Get (CoreSimple), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
 No information found on request to perform content negotiation.
 Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
-Executed action CoreSimple.Controllers.CityController.Get (CoreSimple) in 475.8828ms
-Connection id "0HL6PQ3CSK93P" completed keep alive response.
-Request finished in 638.0495ms 200 application/json; charset=utf-8
-Request starting HTTP/1.1 GET http://localhost:53068/api/city/1  
-Request successfully matched the route with name '(null)' and template 'api/City/{id}'.
-Action 'CoreSimple.Controllers.CityController.Put (CoreSimple)' with id '46840e37-6b92-43d2-88e3-24670aaf4931' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Action 'CoreSimple.Controllers.CityController.Delete (CoreSimple)' with id '16b31783-1e58-4509-88af-cb0a31dfd686' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
-Executing action CoreSimple.Controllers.CityController.Get (CoreSimple)
-Executing action method CoreSimple.Controllers.CityController.Get (CoreSimple) with arguments (1) - ModelState is Valid
-08/02/2017 21:04:13: CityController - Getting item 1
+Executed action CoreSimple.Controllers.ValuesController.Get (CoreSimple) in 481.6342ms
+Connection id "0HL6PQR90OM8S" completed keep alive response.
+Request finished in 973.9335ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:53068/favicon.ico  
+Request did not match any routes.
+Connection id "0HL6PQR90OM8R" completed keep alive response.
+Request finished in 37.5095ms 404 
+Connection id "0HL6PQR90OM8R" received FIN.
+Connection id "0HL6PQR90OM8S" received FIN.
+Connection id "0HL6PQR90OM8S" disconnecting.
+Connection id "0HL6PQR90OM8R" disconnecting.
+Connection id "0HL6PQR90OM8R" sending FIN.
+Connection id "0HL6PQR90OM8S" sending FIN.
+Connection id "0HL6PQR90OM8S" sent FIN with status "0".
+Connection id "0HL6PQR90OM8R" sent FIN with status "0".
+Connection id "0HL6PQR90OM8R" stopped.
+Connection id "0HL6PQR90OM8S" stopped.
+Connection id "0HL6PQR90OM8T" started.
+Request starting HTTP/1.1 GET http://localhost:53068/api/values/1  
+Request successfully matched the route with name '(null)' and template 'api/Values/{id}'.
+Action 'CoreSimple.Controllers.ValuesController.Put (CoreSimple)' with id 'eaa653b2-0107-4ba9-82e9-6f5753d6a10f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Action 'CoreSimple.Controllers.ValuesController.Delete (CoreSimple)' with id '3872f583-6a26-49e8-99bc-2bc4a872daec' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint'
+Executing action CoreSimple.Controllers.ValuesController.Get (CoreSimple)
+Executing action method CoreSimple.Controllers.ValuesController.Get (CoreSimple) with arguments (1) - ModelState is Valid
+08/02/2017 21:49:29 - CityController: Get method with id 1.
 Compiling query model: 
 '(from City t in DbSet<City>
 where t.Id == __id_0
@@ -250,16 +143,16 @@ TRACKED: True
 )
 
 Opening connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-Executed DbCommand (58ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (69ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
 SELECT TOP(1) [t].[Id], [t].[Country], [t].[Name], [t].[Population]
 FROM [City] AS [t]
 WHERE [t].[Id] = @__id_0
 Closing connection to database 'mobilesdb' on server '(localdb)\mssqllocaldb'.
-08/02/2017 21:04:14: CityController - Getting item 1.Ok - Element Found
-Executed action method CoreSimple.Controllers.CityController.Get (CoreSimple), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
+08/02/2017 21:49:29 - CityController: Get method with 1. Success - Element Found!
+Executed action method CoreSimple.Controllers.ValuesController.Get (CoreSimple), returned result Microsoft.AspNetCore.Mvc.ObjectResult.
 No information found on request to perform content negotiation.
 Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response.
 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
-Executed action CoreSimple.Controllers.CityController.Get (CoreSimple) in 421.9896ms
-Connection id "0HL6PQ3CSK93O" completed keep alive response.
-Request finished in 452.1758ms 200 application/json; charset=utf-8
+Executed action CoreSimple.Controllers.ValuesController.Get (CoreSimple) in 394.1861ms
+Connection id "0HL6PQR90OM8T" completed keep alive response.
+Request finished in 427.0261ms 200 application/json; charset=utf-8
