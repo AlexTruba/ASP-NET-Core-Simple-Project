@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using CoreSimple.db;
+using Microsoft.EntityFrameworkCore;
+using CoreSimple.Model;
+using CoreSimple.Service;
+using CoreSimple.Logger;
+using System.IO;
 
 namespace CoreSimple
 {
@@ -29,15 +35,30 @@ namespace CoreSimple
         {
             // Add framework services.
             services.AddMvc();
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<CoreContext>(options => options.UseSqlServer(connection));
+            services.AddTransient<ServiceAsync<City>>();
+            services.AddTransient<IService<City>, Service<City>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,CoreContext context)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+            var pathToFolder = Directory.GetCurrentDirectory() + "/ApiLog";
+            var pathToFile = Path.Combine(pathToFolder, "logger.txt");
+
+            Directory.CreateDirectory(pathToFolder);
+            if (File.Exists(pathToFile))
+            {
+                File.Delete(pathToFile);
+            }
+
+            loggerFactory.AddFile(pathToFile);
+
 
             app.UseMvc();
+            app.UseCors(config => config.AllowAnyHeader());
+            DbInitializer.Initialize(context);
         }
     }
 }
